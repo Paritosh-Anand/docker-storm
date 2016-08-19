@@ -1,0 +1,17 @@
+storm.zookeeper.servers:
+    - "172.16.47.68"
+
+nimbus.host: "172.16.47.68"
+nimbus.childopts: "-Xmx1g -verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=9069"
+
+storm.zookeeper.root: "/storm"
+storm.local.dir: "/var/run/storm/local"
+
+worker.childopts: "-Xmx1g -verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=1%ID%"
+
+supervisor.slots.ports:
+ - 6700
+ - 6701
+
+supervisor.childopts: " -verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=9070"
+
