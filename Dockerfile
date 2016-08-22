@@ -11,9 +11,9 @@ RUN yum -y install java-1.7.0-openjdk python-setuptools
 
 # Install Zookeeper 
 ADD http://mirror.fibergrid.in/apache/zookeeper/zookeeper-${ZK_VERSION}/zookeeper-${ZK_VERSION}.tar.gz /tmp
-RUN tar -zxf /tmp/zookeeper-${ZK_VERSION}.tar.gz -C /opt/ &&  mv /opt/zookeeper-${ZK_VERSION}.tar.gz /opt/zookeeper && rm /tmp/zookeeper-${ZK_VERSION}.tar.gz
+RUN tar -zxf /tmp/zookeeper-${ZK_VERSION}.tar.gz -C /opt/ &&  mv /opt/zookeeper-${ZK_VERSION} /opt/zookeeper && rm /tmp/zookeeper-${ZK_VERSION}.tar.gz
 ADD conf/zoo.cfg  /opt/zookeeper/conf/
-RUN mkdir -p /var/lib/zookeeper && echo 1 > /var/lib/zookeeper/myid && chown -R zookeeper.zookeeper /var/lib/zookeeper && chown -R zookeeper.zookeeper /opt/zookeeper 
+RUN mkdir -p /var/lib/zookeeper && echo 1 > /var/lib/zookeeper/myid 
 
 
 # Install Storm
