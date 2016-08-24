@@ -1,3 +1,6 @@
+[![Docker Pulls](https://img.shields.io/docker/pulls/kakapari/docker-storm.svg)](https://hub.docker.com/r/kakapari/docker-storm/)
+[![Docker Stars](https://img.shields.io/docker/stars/kakapari/docker-storm.svg)](https://hub.docker.com/r/kakapari/docker-storm/)
+
 # docker-storm
 Storm setup in a single Docker container
 
