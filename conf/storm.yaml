@@ -3,7 +3,9 @@ storm.zookeeper.servers:
   - "localhost"
 
 nimbus.host: "localhost"
-nimbus.seeds: "localhost"
+nimbus.seeds: 
+  - "localhost"
+
 nimbus.ui.port: "8080"
 nimbus.childopts: "-Xmx1g -verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=9069"
 

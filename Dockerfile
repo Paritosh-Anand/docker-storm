@@ -1,7 +1,7 @@
 # Docker File
 FROM centos:6
 
-ENV STORM_VERSION 0.10.1
+ENV STORM_VERSION 1.0.2
 ENV ZK_VERSION 3.4.8
 ENV WK_COUNT 2
 ENV WK_PORT 6700
@@ -25,6 +25,6 @@ ADD conf/storm.yaml  /opt/storm/conf/
 RUN easy_install pip && pip install meld3==0.6.7 supervisor==3.0.0 
 COPY supervisord.conf /etc/supervisord.conf
 
-EXPOSE 8080 6627
+EXPOSE 8080 6627 8000
 
 CMD ["/usr/bin/supervisord"]
